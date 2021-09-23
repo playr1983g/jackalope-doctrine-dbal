@@ -3,7 +3,7 @@
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Platforms\MySQLPlatform;
 use Doctrine\DBAL\Platforms\PostgreSQL94Platform;
-use Doctrine\DBAL\Platforms\PostgreSqlPlatform;
+use Doctrine\DBAL\Platforms\PostgreSQLPlatform;
 use Jackalope\Factory;
 use Jackalope\Repository;
 use Jackalope\RepositoryFactoryDoctrineDBAL;
@@ -203,7 +203,7 @@ class ImplementationLoader extends AbstractLoader
                 $testerClass = Mysql::class;
                 break;
 
-            case $platform instanceof PostgreSQL94Platform || $platform instanceof PostgreSqlPlatform:
+            case $platform instanceof PostgreSQL94Platform || $platform instanceof PostgreSQLPlatform:
                 $testerClass = Pgsql::class;
                 break;
 

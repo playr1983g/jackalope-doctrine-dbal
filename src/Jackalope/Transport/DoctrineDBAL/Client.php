@@ -12,7 +12,7 @@ use Doctrine\DBAL\Exception as DBALException;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\MySQLPlatform;
 use Doctrine\DBAL\Platforms\PostgreSQL94Platform;
-use Doctrine\DBAL\Platforms\PostgreSqlPlatform;
+use Doctrine\DBAL\Platforms\PostgreSQLPlatform;
 use Doctrine\DBAL\Platforms\SqlitePlatform;
 use Doctrine\DBAL\Statement;
 use DOMDocument;
@@ -2686,7 +2686,7 @@ phpcr_type_childs ON phpcr_type_nodes.node_type_id = phpcr_type_childs.node_type
         }
 
         $platform = $this->conn->getDatabasePlatform();
-        if ($platform instanceof PostgreSQL94Platform || $platform instanceof PostgreSqlPlatform) {
+        if ($platform instanceof PostgreSQL94Platform || $platform instanceof PostgreSQLPlatform) {
             $this->sequenceNodeName = 'phpcr_nodes_id_seq';
             $this->sequenceTypeName = 'phpcr_type_nodes_node_type_id_seq';
         }
