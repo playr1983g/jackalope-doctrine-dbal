@@ -2090,7 +2090,7 @@ phpcr_type_childs ON phpcr_type_nodes.node_type_id = phpcr_type_childs.node_type
     /**
      * {@inheritDoc}
      */
-    public function registerNodeTypes($types, $allowUpdate): bool
+    public function registerNodeTypes($types, $allowUpdate): void
     {
         $builtinTypes = StandardNodeTypes::getNodeTypeData();
 
@@ -2175,8 +2175,6 @@ phpcr_type_childs ON phpcr_type_nodes.node_type_id = phpcr_type_childs.node_type
                 }
             }
         }
-
-        return true;
     }
 
     /**
